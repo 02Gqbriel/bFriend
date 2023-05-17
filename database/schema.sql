@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS User;
+
 CREATE TABLE IF NOT EXISTS User (
            userID INTEGER PRIMARY KEY AUTOINCREMENT,
            username varchar(255) NOT NULL,
@@ -8,6 +10,8 @@ CREATE TABLE IF NOT EXISTS User (
            hobby varchar(255),
            accStatus varchar(255)
 );
+
+DROP TABLE IF EXISTS Friendship;
 
 CREATE TABLE IF NOT EXISTS Friendship (
     friendshipID INTEGER PRIMARY KEY AUTOINCREMENT,
