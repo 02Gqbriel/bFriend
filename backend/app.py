@@ -3,10 +3,7 @@ from controller import auth
 
 app = Flask(__name__)
 
-
-@app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+app.add_url_rule("/api/auth/login", "login", auth_func=auth.login)
 
 
 if __name__ == '__main__':
