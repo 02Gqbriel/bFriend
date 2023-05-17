@@ -2,8 +2,9 @@ CREATE TABLE IF NOT EXISTS User (
            userID INTEGER PRIMARY KEY AUTOINCREMENT,
            username varchar(255) NOT NULL,
            password varchar(255) NOT NULL,
-           prename varchar(255),
+           firstname varchar(255),
            lastname varchar(255),
+           age INTEGER,
            hobby varchar(255),
            accStatus varchar(255)
 );
