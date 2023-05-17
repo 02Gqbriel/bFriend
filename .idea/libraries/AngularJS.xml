@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="AngularJS" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="&lt;Custom&gt;" />
+      <option name="frameworkVersion" value="" />
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/frontend" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/frontend" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
