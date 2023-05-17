@@ -13,9 +13,11 @@ app.register_blueprint(friendship, url_prefix="/friendship")
 
 @app.route('/')
 def test():
-    return connect_database(
-        "INSERT INTO User (username, password, firstname, lastname, hobby, accStatus) VALUES (?, ?, ?, ?, ?, ?)",
-        "testuser", "1234", "test", "user", "fortnite", "activated")
+    result = connect_database(
+        "INSERT INTO User (username, password, firstname, lastname, age, hobby, accStatus) VALUES (?, ?, ?, ?, ?, ?, ?)",
+        "testuser", "1234", "test", "user", "15", "fortnite", "activated"
+    )
+    return result
 
 
 if __name__ == '__main__':

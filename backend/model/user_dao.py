@@ -12,15 +12,15 @@ def select_user(user_id: int):
 
 def create_user(user: User):
     response = connect_database(
-        "INSERT INTO User (username, password, firstname, lastname, hobby, accStatus) VALUES (?, ?, ?, ?, ?, ?)",
-        user.username, user.password, user.firstname, user.lastname, user.hobby, user.acc_status)
+        "INSERT INTO User (username, password, firstname, lastname, age, hobby, accStatus) VALUES (?, ?, ?, ?, ?, ?)",
+        user.username, user.password, user.firstname, user.lastname, user.age, user.hobby, user.acc_status)
     return response
 
 
 def update_user(user: User):
     response = connect_database(
-        "UPDATE User SET username=?, password=?, firstname=?, lastname=?, hobby=?, accStatus=? WHERE userID=?",
-        user.username, user.password, user.firstname, user.lastname, user.hobby,
+        "UPDATE User SET username=?, password=?, firstname=?, lastname=?, age=?, hobby=?, accStatus=? WHERE userID=?",
+        user.username, user.password, user.firstname, user.lastname, user.age, user.hobby,
         user.acc_status, user.user_id)
     return response
 
