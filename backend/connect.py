@@ -8,12 +8,12 @@ def connect_database(prep_stmt, *args):
     if args is None:
         try:
             cursor.execute(prep_stmt)
-            response = cursor.fetchall()
+            # response = cursor.fetchall()
             sql_conn.close()
-            return response
+            return "created"
         except sqlite3.Error as error:
             return str(error)
-    # only prep_stmt required e.g: connect_database("SELECT * WHERE column1 = ?...", value1, ...)
+    # prep_stmt AND values required e.g: connect_database("SELECT * ... WHERE column1 = ?...", value1, ...)
     else:
         try:
             cursor.execute(prep_stmt, args)
