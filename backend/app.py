@@ -1,4 +1,5 @@
 from flask import Flask
+from controller import auth
 
 app = Flask(__name__)
 
