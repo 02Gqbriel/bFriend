@@ -2,7 +2,7 @@ import sqlite3
 
 
 def connect_database(prep_stmt, *args):
-    sql_conn = sqlite3.connect('../database/sqliite.db')
+    sql_conn = sqlite3.connect('../database/sqlite.db')
     cursor = sql_conn.cursor()
     # only prep_stmt required e.g: connect_database("SELECT * ...", None)
     if args is None:

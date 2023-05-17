@@ -8,3 +8,10 @@ def login():
     username = request.form['username']
     password = request.form["password"]
     return {'message: login successful'}
+
+
+@blueprint.route("/register", methods=["POST"])
+def register():
+    username = request.form['username']
+    password = request.form["password"]
+    return {'message: login successful'}
