@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS User (
            password varchar(255) NOT NULL,
            firstname varchar(255),
            lastname varchar(255),
+           age INTEGER,
            hobby varchar(255),
            accStatus varchar(255)
 );
