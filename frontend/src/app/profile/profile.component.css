@@ -1,0 +1,27 @@
+.profile_title{
+  margin: auto;
+  width: 17%;
+  border: 3px solid black;
+  padding:20px;
+  margin-top: 2%;
+}
+.profile_title svg{
+    border-radius: 40%;
+    margin-top: 0;
+    margin-bottom: 0px;
+    height: 392px;
+    width: 250px;
+}
+.profile_title h1{
+    text-align: center;
+}
+.profile_control{
+  margin: auto;
+  width: 40%;
+  border: 3px solid black;
+  padding:20px;
+  margin-top: 2%;
+}
+.profile_control table{
+
+}
