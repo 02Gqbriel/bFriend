@@ -1,0 +1,122 @@
+/* style.css */
+
+/* Header styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #f0f0f0;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile span {
+  margin-left: 8px;
+}
+
+.logo img {
+  width: 80px;
+  height: 40px;
+}
+
+/* Body styles */
+.body {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #f0f0f0;
+  padding: 16px;
+}
+
+.sidebar-item {
+  margin-bottom: 16px;
+}
+
+.filter-box {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.filter-options label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.content {
+  flex: 1;
+  background-color: #fff;
+  padding: 16px;
+}
+
+/* General styles */
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #28a745;
+}
+/* style.css */
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 16px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.name span {
+  display: block;
+}
+
+.age span,
+.hobbies span {
+  margin-top: 8px;
+}
+
+.profile-buttons button {
+  margin-left: 8px;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-buttons button i {
+  font-size: 16px;
+}
+
+.delete-button {
+  color: red;
+}
+
+.save-button {
+  color: green;
+}
