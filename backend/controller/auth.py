@@ -14,7 +14,7 @@ def login():
 
     res = select_user(user.user_id)
 
-    return {'message: login successful', res}
+    return "success"
 
 
 @blueprint.route("/register", methods=["POST"])
