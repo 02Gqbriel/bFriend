@@ -26,4 +26,4 @@ def register():
 
     create_user(user)
 
-    return {'message: register successful'}
+    return "successful"
