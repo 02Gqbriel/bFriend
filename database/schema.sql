@@ -34,3 +34,15 @@ CREATE TABLE IF NOT EXISTS Friendship
     user2ID      INTEGER,
     FOREIGN KEY (user1ID, user2ID) REFERENCES User (userID, userID)
 );
+
+-- Insert statement 1
+INSERT INTO Friendship (user1ID, user2ID)
+VALUES (1, 2);
+
+-- Insert statement 2
+INSERT INTO Friendship (user1ID, user2ID)
+VALUES (1, 3);
+
+-- Insert statement 3
+INSERT INTO Friendship (user1ID, user2ID)
+VALUES (2, 3);
