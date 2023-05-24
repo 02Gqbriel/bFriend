@@ -3,7 +3,7 @@ from backend.model.user import User
 
 
 def select_all():
-    return connect_database("SELECT * FROM User", None)
+    return connect_database("SELECT * FROM User")
 
 
 def select_user(user_id: int):
