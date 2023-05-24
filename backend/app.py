@@ -15,7 +15,7 @@ app.register_blueprint(friendship, url_prefix="/friendship")
 def test():
     result = connect_database(
         "INSERT INTO User (username, password, firstname, lastname, age, hobby, accStatus) VALUES (?, ?, ?, ?, ?, ?, ?)",
-        "testuser", "1234", "test", "user", "15", "fortnite", "activated"
+        "user2", "1234", "test", "user2", "15", "griddy", "activated"
     )
     return result
 

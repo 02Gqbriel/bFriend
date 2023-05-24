@@ -8,7 +8,7 @@ def connect_database(prep_stmt, *args):
     if args is None:
         try:
             cursor.execute(prep_stmt)
-            sql_conn.commit()  # Commit the transaction
+            sql_conn.commit()
             sql_conn.close()
             return "created"
         except sqlite3.Error as error:
@@ -18,7 +18,7 @@ def connect_database(prep_stmt, *args):
     else:
         try:
             cursor.execute(prep_stmt, args)
-            sql_conn.commit()  # Commit the transaction
+            sql_conn.commit()
             response = cursor.fetchall()
             sql_conn.close()
             return response
