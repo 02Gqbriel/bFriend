@@ -1,0 +1,38 @@
+#register-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#register-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20rem;
+}
+
+
+.input-field{
+  padding-left: 0.5rem;
+  width: 100%;
+  height: 1.5rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+}
+
+.input-field:focus{
+  outline: none;
+}
+
+.button{
+  background-color: var(--main-bg-color);
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  margin: 0.5rem;
+}
