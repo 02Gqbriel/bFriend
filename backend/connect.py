@@ -5,12 +5,13 @@ def connect_database(prep_stmt, *args):
     sql_conn = sqlite3.connect('../database/sqlite.db')
     cursor = sql_conn.cursor()
     # only prep_stmt required e.g: connect_database("SELECT * ...", None)
-    if args is None:
+    if args:
         try:
             cursor.execute(prep_stmt)
             sql_conn.commit()
+            response = cursor.fetchall()
             sql_conn.close()
-            return "created"
+            return response
         except sqlite3.Error as error:
             sql_conn.rollback()
             return str(error)
