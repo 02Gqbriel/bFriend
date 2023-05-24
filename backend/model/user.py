@@ -1,19 +1,41 @@
 class User:
-    def __int__(self, userID, prename, lastname, username, password, hobby, accStatus):
-        self.userID = userID
-        self.prename = prename
-        self.lastname = lastname
-        self.username = username
-        self.password = password
-        self.hobby = hobby
-        self.accStatus = accStatus
+    user_id: int = None
+    firstname: str = None
+    lastname: str = None
+    username: str = None
+    password: str = None
+    hobby: str = None
+    acc_status: str = None
 
-    def __int__(self, userID, username, password):
-        self.userID = userID
-        self.prename = None
-        self.lastname = None
+    def __int__(self, username: str, password: str):
+        self.username: str = username
+        self.password: str = password
+
+    def set_user_id(self, user_id: int):
+        self.user_id = user_id
+        return
+    
+    def set_firstname(self, firstname: str):
+        self.firstname = firstname
+        return
+
+    def set_lastname(self, lastname: str):
+        self.lastname = lastname
+        return
+
+    def set_username(self, username: str):
         self.username = username
+        return
+
+    def set_password(self, password: str):
         self.password = password
-        self.hobby = None
-        self.accStatus = None
+        return
+
+    def set_hobby(self, hobby: str):
+        self.hobby = hobby
+        return
+
+    def set_acc_status(self, acc_status: str):
+        self.acc_status = acc_status
+        return
 

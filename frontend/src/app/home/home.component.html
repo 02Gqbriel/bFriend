@@ -1,3 +1,55 @@
-
 <h1>Home</h1>
 
+<!-- home.component.html -->
+
+<!-- Header -->
+<header>
+  <div class="profile">
+    <img src="./favicon.ico" alt="Profile Picture">
+    <span>My Profile</span>
+  </div>
+  <div class="logo">
+    <img src="./favicon.ico" alt="Logo">
+  </div>
+</header>
+
+<!-- Body -->
+<div class="body">
+  <div class="sidebar">
+    <div class="sidebar-item">
+      <button>My Chats</button>
+    </div>
+    <div class="sidebar-item filter-box">
+      <h2>Filter</h2>
+      <div class="filter-options">
+        <label><input type="checkbox"> Age</label>
+        <label><input type="checkbox"> Hobby</label>
+        <!-- Add more checkbox options as needed -->
+      </div>
+      <button class="save-button">Save</button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="profile-section">
+      <div class="profile-info">
+        <div class="profile-picture">
+          <img src="path/to/profile-picture.jpg" alt="Profile Picture">
+        </div>
+        <div class="name">
+          <span>First Name</span>
+          <span>Last Name</span>
+        </div>
+        <div class="age">
+          <span>Age: 25</span>
+        </div>
+        <div class="hobbies">
+          <span>Hobbies: Hobby 1, Hobby 2, Hobby 3</span>
+        </div>
+      </div>
+      <div class="profile-buttons">
+        <button class="delete-button"><i class="fa fa-times"></i></button>
+        <button class="save-button"><i class="fa fa-check"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
