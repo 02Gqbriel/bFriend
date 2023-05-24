@@ -15,8 +15,7 @@ def test():
     #     "INSERT INTO User (username, password, firstname, lastname, age, hobby, accStatus) VALUES (?, ?, ?, ?, ?, ?, ?)",
     #     "user2", "1234", "test", "user2", "15", "griddy", "activated"
     # )
-
-    return user_dao.select_all()
+    return user_dao.select_user(1)
 
 if __name__ == '__main__':
     app.run()
