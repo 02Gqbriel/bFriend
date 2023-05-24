@@ -12,7 +12,7 @@ import {Injectable} from "@angular/core";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  onClicksubmit(data: any ){
+  onClickSubmit(data: any ){
     const formData = new FormData();
     formData.append("username",data.username);
     formData.append("password",data.password);

@@ -2,7 +2,7 @@
 <div id="login-container">
   <div id="login-content">
     <h1>Login</h1>
-    <form #userlogin = "ngForm" (ngSubmit)="onClicksubmit(userlogin.value)">
+    <form #userlogin = "ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
       <input class="input-field" name="username" type="text" placeholder="username" ngModel>
       <input class="input-field" name="password" type="password" placeholder="password" ngModel>
       <button class="button" type="submit">Login</button>
