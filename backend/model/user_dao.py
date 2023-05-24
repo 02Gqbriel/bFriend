@@ -1,8 +1,9 @@
 from ..connect import connect_database
 from ..model.user import User
 
+
 def select_all():
-    return
+    return connect_database("SELECT * FROM User")
 
 
 def select_user(user_id: int):
