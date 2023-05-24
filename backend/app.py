@@ -1,5 +1,4 @@
-from flask import Flask
-from connect import connect_database
+from flask import Flask, render_template
 from model import user_dao
 from controller.auth import blueprint as auth
 from controller.friendship import blueprint as friendship
@@ -9,14 +8,19 @@ app = Flask(__name__)
 app.register_blueprint(auth, url_prefix="/auth")
 app.register_blueprint(friendship, url_prefix="/friendship")
 
+
 @app.route('/')
-def test():
-    # result = connect_database(
-    #     "INSERT INTO User (username, password, firstname, lastname, age, hobby, accStatus) VALUES (?, ?, ?, ?, ?, ?, ?)",
-    #     "user2", "1234", "test", "user2", "15", "griddy", "activated"
-    # )
-    return user_dao.select_user(1)
+def red_login():
+    return "good"
+
+@app.after_request
+def apply_caching(response):
+    response.headers["Access-Control-Allow-Origin"] = "http://localhost:4200"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+
+    return response
+
 
 if __name__ == '__main__':
     app.run()
-
