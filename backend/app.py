@@ -2,8 +2,11 @@ from flask import Flask, render_template
 from model import user_dao
 from controller.auth import blueprint as auth
 from controller.friendship import blueprint as friendship
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+CORS(app)
 
 app.register_blueprint(auth, url_prefix="/auth")
 app.register_blueprint(friendship, url_prefix="/friendship")
