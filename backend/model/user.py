@@ -3,11 +3,12 @@ class User:
     firstname: str = None
     lastname: str = None
     username: str = None
+    age: int = None
     password: str = None
     hobby: str = None
     acc_status: str = None
 
-    def __int__(self, username: str, password: str):
+    def __init__(self, username: str, password: str):
         self.username: str = username
         self.password: str = password
 
@@ -25,6 +26,10 @@ class User:
 
     def set_username(self, username: str):
         self.username = username
+        return
+
+    def set_age(self, age: int):
+        self.age = age
         return
 
     def set_password(self, password: str):
