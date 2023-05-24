@@ -13,6 +13,15 @@
   width: 20rem;
 }
 
+#name-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* Updated */
+}
+
+#input-container{
+  width: 100%;
+}
 
 .input-field{
   padding-left: 0.5rem;
