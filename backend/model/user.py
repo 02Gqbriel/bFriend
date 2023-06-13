@@ -8,9 +8,12 @@ class User:
     hobby: str = None
     acc_status: str = None
 
-    def __init__(self, username: str, password: str):
+    def __init__(self, username: str, password: str, firstname: str, lastname: str, acc_status: str):
         self.username: str = username
         self.password: str = password
+        self.firstname: str = firstname
+        self.lastname: str = lastname
+        self.acc_status: str = acc_status
 
     def set_user_id(self, user_id: int):
         self.user_id = user_id

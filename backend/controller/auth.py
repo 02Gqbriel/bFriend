@@ -21,8 +21,11 @@ def login():
 def register():
     username = request.form['username']
     password = request.form["password"]
+    firstname = request.form["firstname"]
+    lastname = request.form["lastname"]
+    acc_status = "Active"
 
-    user = User(username, password)
+    user = User(username, password, firstname, lastname, acc_status)
 
     create_user(user)
 
