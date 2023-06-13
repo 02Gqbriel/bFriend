@@ -1,0 +1,33 @@
+#header-container{
+    border-bottom: #dee2e6 1px solid;
+    height: 3rem;
+}
+
+#header-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.header-item{
+    height: 100%;
+    width: 5rem;
+    list-style: none;
+}
+
+.header-item:hover{
+    background: #dee2e6;
+}
+
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
