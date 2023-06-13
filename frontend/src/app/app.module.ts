@@ -8,6 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
+import { ProfileComponent} from "./profile/profile.component";
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { AddMediaComponent } from './add-media/add-media.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProfileComponent,
+    EditProfileComponent,
+    AddMediaComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

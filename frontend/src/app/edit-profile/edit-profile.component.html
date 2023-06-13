@@ -1,0 +1,40 @@
+<body>
+<h1>Edit User Information</h1>
+<form #edit_profile = "ngForm" (ngSubmit)="edit_profile_onClick(edit_profile.value)">
+<table>
+  <tr>
+    <td>
+      <p>Username</p>
+    </td>
+    <td>
+        <input type="text" name="username" ngModel>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>New password</p>
+    </td>
+    <td>
+        <input type="password" name="password" ngModel>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p>Confirm password</p>
+    </td>
+    <td>
+        <input type="password" name="password_confirm" ngModel>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td class="submit_button">
+      <button id="submit" >save changes</button>
+    </td>
+
+  </tr>
+</table>
+</form>
+</body>
+
