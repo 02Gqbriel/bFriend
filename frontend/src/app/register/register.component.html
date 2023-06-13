@@ -1,17 +1,10 @@
 <div id="register-container">
   <div id="register-content">
     <h1>Register</h1>
-    <form>
-      <div id="name-container">
-        <input class="input-field" type="text" placeholder="firstname">
-        <input class="input-field" type="text" placeholder="lastname">
-      </div>
-
-        <input style="width: 92%; !important;" class="input-field" type="email" placeholder="example@example.com">
-        <input style="width: 92%; !important;" class="input-field" type="password" placeholder="password">
-
-
-      <button class="button">Register</button>
+    <form #userRegister = "ngForm" (ngSubmit)="onClickSubmit(userRegister.value)">
+      <input class="input-field" name="username" type="text" placeholder="username" ngModel>
+      <input class="input-field" name="password" type="password" placeholder="password" ngModel>
+      <button class="button" type="submit">Register</button>
     </form>
   </div>
 </div>
