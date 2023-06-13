@@ -1,0 +1,13 @@
+table, h1 {
+  margin: auto;
+  margin-top: 50px;
+  grid-template-columns: 1fr;
+}
+
+body h1 {
+  text-align: center;
+}
+
+.submit-button {
+  text-align: right;
+}
