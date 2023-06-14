@@ -37,7 +37,7 @@ def register():
     user.set_email(email)
     user.set_firstname(firstname)
     user.set_lastname(lastname)
-    user.set_age(age)
+    user.set_age(int(age))
     user.set_hobby(hobby)
     user.set_acc_status(acc_status)
 
