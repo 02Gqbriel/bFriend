@@ -14,6 +14,9 @@ export class RegisterComponent {
     formData.append("password",data.password);
     formData.append("firstname",data.firstname);
     formData.append("lastname",data.lastname);
+    formData.append("age",data.age);
+    formData.append("email",data.email);
+    formData.append("hobby",data.hobby);
     console.log(formData)
     axios
       .post('http://localhost:5000/auth/register', formData)
