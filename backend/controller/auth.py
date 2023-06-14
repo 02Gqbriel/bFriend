@@ -12,6 +12,8 @@ def login():
 
     all_users = select_all()
 
+    print(all_users)
+
     for user in all_users:
         if user.username == username and user.password == password:
             response = make_response("success")
