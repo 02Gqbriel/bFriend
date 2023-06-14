@@ -8,9 +8,10 @@ class User:
     hobby: str = None
     acc_status: str = None
 
-    def __init__(self, username: str, password: str, firstname: str, lastname: str, acc_status: str):
+    def __init__(self, username: str, password: str, email: str, firstname: str, lastname: str, age: str, hobby: str, acc_status: str):
         self.username: str = username
         self.password: str = password
+        self.email: str = email
         self.firstname: str = firstname
         self.lastname: str = lastname
         self.acc_status: str = acc_status
@@ -18,13 +19,17 @@ class User:
     def set_user_id(self, user_id: int):
         self.user_id = user_id
         return
-    
+
     def set_firstname(self, firstname: str):
         self.firstname = firstname
         return
 
     def set_lastname(self, lastname: str):
         self.lastname = lastname
+        return
+
+    def set_email(self, email: str):
+        self.email = email
         return
 
     def set_username(self, username: str):
@@ -46,4 +51,3 @@ class User:
     def set_acc_status(self, acc_status: str):
         self.acc_status = acc_status
         return
-
