@@ -3,8 +3,9 @@ DROP TABLE IF EXISTS User;
 CREATE TABLE IF NOT EXISTS User
 (
     userID    INTEGER PRIMARY KEY AUTOINCREMENT,
-    username  varchar(255) NOT NULL,
+    username  varchar(255) NOT NULL UNIQUE,
     password  varchar(255) NOT NULL,
+    email     varchar(255) NOT NULL UNIQUE,
     firstname varchar(255),
     lastname  varchar(255),
     age       INTEGER,
@@ -12,17 +13,16 @@ CREATE TABLE IF NOT EXISTS User
     accStatus varchar(255)
 );
 
--- Insert statement 1
-INSERT INTO User (username, password, firstname, lastname, age, hobby, accStatus)
-VALUES ('john_doe', 'password123', 'John', 'Doe', 30, 'Reading', 'Active');
+INSERT INTO User (username, password, email, firstname, lastname, age, hobby, accStatus)
+VALUES ('johnsmith', 'pass123', 'johnsmith@example.com', 'John', 'Smith', 30, 'Reading', 'Active');
 
--- Insert statement 2
-INSERT INTO User (username, password, firstname, lastname, age, hobby, accStatus)
-VALUES ('jane_smith', 'securepass', 'Jane', 'Smith', 25, 'Gardening', 'Active');
+INSERT INTO User (username, password, email, firstname, lastname, age, hobby, accStatus)
+VALUES ('janedoe', 'password456', 'jane.doe@example.com', 'Jane', 'Doe', 25, 'Painting', 'Active');
 
--- Insert statement 3
-INSERT INTO User (username, password, firstname, lastname, age, hobby, accStatus)
-VALUES ('mark_johnson', 'letmein', 'Mark', 'Johnson', 35, 'Hiking', 'Inactive');
+INSERT INTO User (username, password, email, firstname, lastname, age, hobby, accStatus)
+VALUES ('mikebrown', 'securepass789', 'mike.brown@example.com', 'Mike', 'Brown', 35, 'Cooking', 'Inactive');
+
+
 
 
 DROP TABLE IF EXISTS Friendship;
