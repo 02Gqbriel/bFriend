@@ -1,6 +1,6 @@
 from flask import Blueprint, request, make_response
 from backend.model.user import User
-from backend.model.user_dao import create_user, select_user
+from backend.model.user_dao import create_user, select_user, select_all
 
 blueprint = Blueprint("auth", __name__)
 
@@ -10,15 +10,15 @@ def login():
     username = request.form['username']
     password = request.form["password"]
 
-    user = User(username, password)
+    all_users = select_all()
 
-    res = select_user(user.user_id)
+    for user in all_users:
+        if user.username == username and user.password == password:
+            response = make_response("success")
+            response.set_cookie("user_id", str(user.user_id))
+            return response
 
-    response = make_response("success")
-
-    response.set_cookie("user_id", str(res.user_id))
-
-    return response
+    return "Login failed: invalid username or password"
 
 
 @blueprint.route("/register", methods=["POST"])
