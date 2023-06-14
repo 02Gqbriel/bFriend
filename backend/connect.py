@@ -15,8 +15,8 @@ def connect_database(prep_stmt, *args):
 
             response = [dict(row) for row in rows]
 
-            json_response = json.dumps(response)
-            return json_response
+            #json_response = json.dumps(response)
+            return response
         except sqlite3.Error as error:
             sql_conn.rollback()
             return json.dumps(str(error))
@@ -29,8 +29,8 @@ def connect_database(prep_stmt, *args):
 
             response = [dict(row) for row in rows]
 
-            json_response = json.dumps(response)
-            return json_response
+            #json_response = json.dumps(response)
+            return response
         except sqlite3.Error as error:
             sql_conn.rollback()
             return json.dumps(str(error))

@@ -1,6 +1,7 @@
-from flask import Blueprint, request
+from flask import Blueprint, request, make_response, abort
+
 from backend.model.user import User
-from backend.model.user_dao import create_user, select_user
+from backend.model.user_dao import create_user, select_all
 
 blueprint = Blueprint("auth", __name__)
 
@@ -10,22 +11,35 @@ def login():
     username = request.form['username']
     password = request.form["password"]
 
-    user = User(username, password)
+    all_users = select_all()
 
-    res = select_user(user.user_id)
+    for user in all_users:
+        if user.get("username") == username and user.get("password") == password:
+            response = make_response(user.get("userID"))
+            return response
 
-    return "success"
+    abort(404)
 
 
 @blueprint.route("/register", methods=["POST"])
 def register():
     username = request.form['username']
-    password = request.form["password"]
-    firstname = request.form["firstname"]
-    lastname = request.form["lastname"]
+    password = request.form['password']
+    email = request.form['email']
+    firstname = request.form['firstname']
+    lastname = request.form['lastname']
+    age = request.form['age']
+    hobby = request.form['hobby']
     acc_status = "Active"
 
-    user = User(username, password, firstname, lastname, acc_status)
+    user = User(username, password)
+
+    user.set_email(email)
+    user.set_firstname(firstname)
+    user.set_lastname(lastname)
+    user.set_age(int(age))
+    user.set_hobby(hobby)
+    user.set_acc_status(acc_status)
 
     create_user(user)
 

@@ -43,7 +43,7 @@ header {
 .filter-box {
   background-color: #fff;
   padding: 16px;
-  border-radius: 4px;
+  border-radius: 0.5rem;
 }
 
 .filter-options label {
@@ -78,11 +78,15 @@ button {
   justify-content: space-between;
   background-color: #f0f0f0;
   padding: 16px;
+  flex-direction: column;
+  border-radius: 0.5rem;
 }
 
 .profile-info {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .profile-picture img {
@@ -93,7 +97,7 @@ button {
 }
 
 .name span {
-  display: block;
+  margin-bottom: 1rem;
 }
 
 .age span,
@@ -104,19 +108,34 @@ button {
 .profile-buttons button {
   margin-left: 8px;
   padding: 8px;
-  background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
+.profile-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: .75rem;
+}
+
 .profile-buttons button i {
   font-size: 16px;
+  font-style: normal;
 }
 
 .delete-button {
-  color: red;
+  width: 4rem;
+  background-color: red;
 }
 
 .save-button {
-  color: green;
+  color: white;
+  width: 4rem;
+}
+
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

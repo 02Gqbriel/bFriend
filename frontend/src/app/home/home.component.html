@@ -1,13 +1,11 @@
 <app-header></app-header>
-<h1>Home</h1>
 
 <!-- home.component.html -->
 
 <!-- Header -->
 <header>
   <div class="profile">
-    <img src="./favicon.ico" alt="Profile Picture">
-    <span>My Profile</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 2rem"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
   </div>
   <div class="logo">
     <img src="./favicon.ico" alt="Logo">
@@ -33,23 +31,24 @@
   <div class="content">
     <div class="profile-section">
       <div class="profile-info">
-        <div class="profile-picture">
-          <img src="path/to/profile-picture.jpg" alt="Profile Picture">
+        <div class="profile-picture" style="margin-bottom: .75rem">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 4.5rem"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
         </div>
-        <div class="name">
-          <span>First Name</span>
-          <span>Last Name</span>
+        <div class="name" style="margin-bottom: 0.75rem;">
+          <span style="margin-bottom: 0.75rem">First Name   </span>
+          <span style="margin-bottom: 0.75rem">   Last Name</span>
         </div>
-        <div class="age">
-          <span>Age: 25</span>
+        <div class="age" style="margin-bottom: 0.75rem">
+          <span style="margin-bottom: 0.75rem">Age: 25</span>
         </div>
         <div class="hobbies">
-          <span>Hobbies: Hobby 1, Hobby 2, Hobby 3</span>
+          <span style="margin-bottom: 0.75rem">Hobbies: </span>
+          <span> Hobby 1, Hobby 2, Hobby 3</span>
         </div>
       </div>
       <div class="profile-buttons">
-        <button class="delete-button"><i class="fa fa-times"></i></button>
-        <button class="save-button"><i class="fa fa-check"></i></button>
+        <button class="delete-button"><i class="fa fa-times">✖</i></button>
+        <button class="save-button"><i class="fa fa-check">✔</i></button>
       </div>
     </div>
   </div>
