@@ -14,6 +14,8 @@ class User:
         self.email: str = email
         self.firstname: str = firstname
         self.lastname: str = lastname
+        self.age: str = age
+        self.hobby: str = hobby
         self.acc_status: str = acc_status
 
     def set_user_id(self, user_id: int):
