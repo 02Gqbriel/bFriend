@@ -1,4 +1,4 @@
-from flask import Blueprint, request
+from flask import Blueprint, request, make_response
 from backend.model.user import User
 from backend.model.user_dao import create_user, select_user
 
@@ -14,7 +14,11 @@ def login():
 
     res = select_user(user.user_id)
 
-    return "success"
+    response = make_response("success")
+
+    response.set_cookie("user_id", str(res.user_id))
+
+    return response
 
 
 @blueprint.route("/register", methods=["POST"])
