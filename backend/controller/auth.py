@@ -20,12 +20,15 @@ def login():
 @blueprint.route("/register", methods=["POST"])
 def register():
     username = request.form['username']
-    password = request.form["password"]
-    firstname = request.form["firstname"]
-    lastname = request.form["lastname"]
+    password = request.form['password']
+    email = request.form['email']
+    firstname = request.form['firstname']
+    lastname = request.form['lastname']
+    age = request.form['age']
+    hobby = request.form['hobby']
     acc_status = "Active"
 
-    user = User(username, password, firstname, lastname, acc_status)
+    user = User(username, password, email, firstname, lastname, age, hobby, acc_status)
 
     create_user(user)
 
