@@ -11,3 +11,26 @@ body h1 {
 .submit-button {
   text-align: right;
 }
+table p{
+  margin-top: 20px;
+}
+table h2{
+  margin-top: 20px;
+}
+button{
+  background-color: var(--main-bg-color);
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+input{
+  width: 100%;
+  height: 1.5rem;
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 0.3rem;
+}
