@@ -17,7 +17,7 @@ def login():
     for user in all_users:
         if user.get("username") == username and user.get("password") == password:
             response = make_response("success")
-            response.set_cookie("user_id", str(user.get("userID")),  max_age=60*60*24*365*2,)
+            response.set_cookie("user_id", str(user.get("userID")),  max_age=60*60*24*365*2)
             return response
 
     abort(404)
