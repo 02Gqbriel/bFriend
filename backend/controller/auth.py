@@ -15,8 +15,7 @@ def login():
 
     for user in all_users:
         if user.get("username") == username and user.get("password") == password:
-            response = make_response(user.get("userID"))
-            return response
+            return str(user.get("userID"))
 
     abort(404)
 
