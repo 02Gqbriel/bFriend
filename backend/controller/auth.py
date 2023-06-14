@@ -1,6 +1,7 @@
 from flask import Blueprint, request, make_response, abort
+
 from backend.model.user import User
-from backend.model.user_dao import create_user, select_user, select_all
+from backend.model.user_dao import create_user, select_all
 
 blueprint = Blueprint("auth", __name__)
 
@@ -12,12 +13,9 @@ def login():
 
     all_users = select_all()
 
-    print(all_users)
-
     for user in all_users:
         if user.get("username") == username and user.get("password") == password:
-            response = make_response("success")
-            response.set_cookie("user_id", str(user.get("userID")),  max_age=60*60*24*365*2)
+            response = make_response(user.get("userID"))
             return response
 
     abort(404)
