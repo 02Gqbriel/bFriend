@@ -15,12 +15,12 @@ def login():
     print(all_users)
 
     for user in all_users:
-        if user.username == username and user.password == password:
+        if user.get("username") == username and user.get("password") == password:
             response = make_response("success")
-            response.set_cookie("user_id", str(user.user_id))
+            response.set_cookie("user_id", str(user.get("userID")),  max_age=60*60*24*365*2,)
             return response
 
-    return "Login failed: invalid username or password"
+    abort(404)
 
 
 @blueprint.route("/register", methods=["POST"])
