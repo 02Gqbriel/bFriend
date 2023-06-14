@@ -32,7 +32,14 @@ def register():
     hobby = request.form['hobby']
     acc_status = "Active"
 
-    user = User(username, password, email, firstname, lastname, age, hobby, acc_status)
+    user = User(username, password)
+
+    user.set_email(email)
+    user.set_firstname(firstname)
+    user.set_lastname(lastname)
+    user.set_age(age)
+    user.set_hobby(hobby)
+    user.set_acc_status(acc_status)
 
     create_user(user)
 

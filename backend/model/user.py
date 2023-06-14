@@ -1,6 +1,7 @@
 class User:
     user_id: int = None
     firstname: str = None
+    email: str = None
     lastname: str = None
     username: str = None
     age: int = None
@@ -8,15 +9,9 @@ class User:
     hobby: str = None
     acc_status: str = None
 
-    def __init__(self, username: str, password: str, email: str, firstname: str, lastname: str, age: str, hobby: str, acc_status: str):
+    def __init__(self, username: str, password: str):
         self.username: str = username
         self.password: str = password
-        self.email: str = email
-        self.firstname: str = firstname
-        self.lastname: str = lastname
-        self.age: str = age
-        self.hobby: str = hobby
-        self.acc_status: str = acc_status
 
     def set_user_id(self, user_id: int):
         self.user_id = user_id
