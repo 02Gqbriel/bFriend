@@ -17,7 +17,7 @@ def select_user():
     return user
 
 
-@blueprint.route("/delete-user", methods=["DELETE"])
+@blueprint.route("/delete-user", methods=["POST"])
 def delete_user():
     user_id = request.form["userID"]
     delete_user(int(user_id))
