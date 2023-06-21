@@ -1,5 +1,7 @@
 from flask import Blueprint, request
-from backend.model.user_dao import select_all, select_user, delete_user
+
+from backend.model.user import User
+from backend.model.user_dao import select_all, select_user, delete_user, update_user
 
 blueprint = Blueprint("user_actions", __name__)
 
@@ -22,3 +24,27 @@ def delete_user_from_database():
     user_id = request.form["userID"]
     response = delete_user(int(user_id))
     return response
+
+
+@blueprint.route("edit-user", methods=["POST"])
+def update_user_from_database():
+    username = request.form['username']
+    password = request.form['password']
+    email = request.form['email']
+    firstname = request.form['firstname']
+    lastname = request.form['lastname']
+    age = request.form['age']
+    hobby = request.form['hobby']
+    acc_status = "Active"
+
+    user = User(username, password)
+
+    user.set_email(email)
+    user.set_firstname(firstname)
+    user.set_lastname(lastname)
+    user.set_age(int(age))
+    user.set_hobby(hobby)
+    user.set_acc_status(acc_status)
+
+    update_user(user)
+    return user
