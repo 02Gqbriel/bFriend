@@ -1,16 +1,47 @@
-import { Component } from '@angular/core';
-import axios, {AxiosResponse} from "axios";
+import { Component, OnInit } from '@angular/core';
+import axios, { AxiosResponse } from "axios";
 
 @Component({
   selector: 'app-edit-profile',
   templateUrl: './edit-profile.component.html',
   styleUrls: ['./edit-profile.component.css']
 })
+export class EditProfileComponent implements OnInit {
 
+  constructor() {
+    this.get_user_session();
+  }
 
+  ngOnInit() {
+    // Other initialization logic
+  }
 
-export class EditProfileComponent {
-  edit_profile_onClick(data: any ){
+  get_user_session() {
+    const formData = new FormData();
+    formData.append("userID", '1');
+
+    axios
+      .post("http://localhost:5000/user_actions/select-user", formData)
+      .then((response: AxiosResponse) => {
+        console.log("user data has been received");
+        console.log(response.data);
+        return response.data;
+      })
+      .catch((error: any) => {
+        console.log(error);
+      });
+  }
+
+  set_user_firstname(name: string) {
+    //user_firstname = name;
+  }
+
+  get_user_firstname() {
+    //return user_firstname;
+  }
+
+    edit_profile_onClick(data: any ){
+
     if (data.password == data.password_confirm) {
 
       for (let i = 0; i < 5000; i++){
@@ -24,16 +55,16 @@ export class EditProfileComponent {
       const formData = new FormData();
 
       formData.append("firstname", data.firstname);
-      formData.append("firstname", data.lastname);
-      formData.append("firstname", data.age);
+      formData.append("lastname", data.lastname);
+      formData.append("age", data.age);
       formData.append("username", data.username);
       formData.append("email", data.email);
       formData.append("password", data.password);
-      formData.append("password_confirm", data.password_confirm);
+      formData.append("hobby", data.hobbies)
 
       console.log(formData);
       axios
-        .post('http://localhost:5000/auth/update', formData)
+        .post('http://localhost:5000/user_actions/edit-user', formData)
         .then((response: AxiosResponse) => {
           console.log("user data has been submitted")
         })
@@ -48,25 +79,7 @@ export class EditProfileComponent {
       p.textContent = "password does not match";
       response_status?.appendChild(p);
     }
-  }
-  get_user_session(){
-    axios
-      .post("http://localhost:5000/user_actions/select-user", 1)
-              .then((response: AxiosResponse) => {
-          console.log("user data has been received")
-                  //this.set_user_firstname(response.data[0]);
-                console.log(response.data)
-        })
-        .catch((error: any) => {
-          console.log(error)
-        })
-  }
 
-  set_user_firstname(name:string){
-      //user_firstname = name;
-  }
-  get_user_firstname(){
-       //return user_firstname;
   }
 
 }
