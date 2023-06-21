@@ -19,12 +19,12 @@ def create_user(user: User):
     return response
 
 
-def update_user(user: User):
+def update_user(user: User, user_id: int):
     response = connect_database(
         "UPDATE User SET username=?, password=?, email=?, firstname=?, lastname=?, age=?, hobby=? "
         "WHERE userID=?",
         user.username, user.password, user.email, user.firstname, user.lastname, user.age, user.hobby,
-        user.acc_status, user.user_id)
+        user_id)
     return response
 
 
