@@ -21,10 +21,9 @@ def create_user(user: User):
 
 def update_user(user: User):
     response = connect_database(
-        "UPDATE User SET username=?, password=?, email=?, firstname=?, lastname=?, age=?, hobby=?, accStatus=? "
+        "UPDATE User SET username=?, password=?, email=?, firstname=?, lastname=?, age=?, hobby=? "
         "WHERE userID=?",
-        user.username, user.password, user.email, user.firstname, user.lastname, user.age, user.hobby,
-        user.acc_status, user.user_id)
+        user.username, user.password, user.email, user.firstname, user.lastname, user.age, user.hobby, user.user_id)
     return response
 
 
@@ -33,5 +32,5 @@ def delete_user(user_id: int):
     return response
 
 
-def change_status(user_id: int):
+def change_status(user_id: int, acc_status: int):
     return "JOE mama"
