@@ -1,7 +1,7 @@
 <app-header></app-header>
 <body>
 <h1>Edit User Information</h1>
-<form #edit_profile = "ngForm" (ngSubmit)="edit_profile_onClick(edit_profile.value)">
+<form ng-init="get_user_session()" #edit_profile = "ngForm" (ngSubmit)="edit_profile_onClick(edit_profile.value)">
 <table>
   <h2>Personal Information</h2>
   <tr>
@@ -67,8 +67,10 @@
     <td class="submit_button">
       <button id="submit" >save changes</button>
     </td>
-
   </tr>
+  <div id="response_status">
+    <p id="success"></p>
+  </div>
 </table>
 </form>
 </body>
