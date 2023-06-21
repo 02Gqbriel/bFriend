@@ -18,6 +18,7 @@ app.register_blueprint(user_actions, url_prefix="/user_actions")
 def red_login():
     return "good"
 
+
 @app.after_request
 def apply_caching(response):
     response.headers["Access-Control-Allow-Origin"] = "http://localhost:4200"
