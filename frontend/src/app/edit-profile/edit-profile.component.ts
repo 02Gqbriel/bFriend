@@ -46,15 +46,14 @@ export class EditProfileComponent implements OnInit {
 
     edit_profile_onClick(data: any ){
 
+    console.log(data)
+
     if (data.password == data.password_confirm) {
 
-      for (let i = 0; i < 5000; i++){
         const response_status = document.getElementById("success");
         const p = document.createElement("p");
         p.textContent = "All changes have been saved";
         response_status?.appendChild(p);
-      }
-
 
       const formData = new FormData();
 
