@@ -26,7 +26,7 @@ def delete_user_from_database():
     return response
 
 
-@blueprint.route("edit-user", methods=["POST"])
+@blueprint.route("/edit-user", methods=["POST"])
 def update_user_from_database():
     username = request.form['username']
     password = request.form['password']
@@ -48,3 +48,8 @@ def update_user_from_database():
 
     update_user(user)
     return user
+
+
+@blueprint.route("/activation", methods=["POST"])
+def change_status_from_database():
+    return "Joe mama"
