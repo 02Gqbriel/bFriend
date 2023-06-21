@@ -23,7 +23,8 @@ def update_user(user: User):
     response = connect_database(
         "UPDATE User SET username=?, password=?, email=?, firstname=?, lastname=?, age=?, hobby=? "
         "WHERE userID=?",
-        user.username, user.password, user.email, user.firstname, user.lastname, user.age, user.hobby, user.user_id)
+        user.username, user.password, user.email, user.firstname, user.lastname, user.age, user.hobby,
+        user.acc_status, user.user_id)
     return response
 
 

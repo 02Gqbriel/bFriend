@@ -35,6 +35,7 @@ def update_user_from_database():
     lastname = request.form['lastname']
     age = request.form['age']
     hobby = request.form['hobby']
+    acc_status = "Active"
 
     user = User(username, password)
 
@@ -43,6 +44,7 @@ def update_user_from_database():
     user.set_lastname(lastname)
     user.set_age(int(age))
     user.set_hobby(hobby)
+    user.set_acc_status(acc_status)
 
     update_user(user)
     return user
