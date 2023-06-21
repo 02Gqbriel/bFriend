@@ -9,7 +9,7 @@
       <p>Firstname</p>
     </td>
     <td>
-        <input ng-init="get_user_session()" type="text" name="firstname" ngModel>
+        <input ng-init="get_user_session()" type="text" name="firstname" [(ngModel)]="userData[0].firstname" >
     </td>
   </tr>
   <tr>
@@ -17,7 +17,7 @@
       <p>Lastname</p>
     </td>
     <td>
-        <input type="text" name="lastname" ngModel>
+        <input type="text" name="lastname" [(ngModel)]="userData[0].lastname">
     </td>
   </tr>
     <tr>
@@ -25,7 +25,7 @@
       <p>Age</p>
     </td>
     <td>
-        <input type="number" name="age" ngModel>
+        <input type="number" name="age" [(ngModel)]="userData[0].age">
     </td>
   </tr>
   <tr>
@@ -33,7 +33,7 @@
       <p>Hobbies</p>
     </td>
     <td>
-        <input type="text" name="hobbies" ngModel>
+        <input type="text" name="hobbies" [(ngModel)]="userData[0].hobby">
     </td>
   </tr>
   <h2>Account Information</h2>
@@ -42,7 +42,7 @@
       <p>Username</p>
     </td>
     <td>
-        <input type="text" name="username" ngModel>
+        <input type="text" name="username" [(ngModel)]="userData[0].username">
     </td>
   </tr>
     <tr>
@@ -50,7 +50,7 @@
       <p>Email</p>
     </td>
     <td>
-        <input type="email" name="email" ngModel>
+        <input type="email" name="email" [(ngModel)]="userData[0].email">
     </td>
   </tr>
   <tr>
@@ -58,7 +58,7 @@
       <p>New password</p>
     </td>
     <td>
-        <input type="password" name="password" ngModel>
+        <input type="password" name="password" >
     </td>
   </tr>
   <tr>
