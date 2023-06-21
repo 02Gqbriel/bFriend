@@ -11,14 +11,14 @@ def get_all_users():
 
 
 @blueprint.route("/select-user", methods=["POST"])
-def select_user():
+def select_user_from_database():
     user_id = request.form["userID"]
     user = select_user(int(user_id))
     return user
 
 
 @blueprint.route("/delete-user", methods=["POST"])
-def delete_logged_user():
+def delete_user_from_database():
     user_id = request.form["userID"]
     response = delete_user(int(user_id))
     return response
