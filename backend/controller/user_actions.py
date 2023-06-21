@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from backend.model.user_dao import select_all, select_user
+from backend.model.user_dao import select_all, select_user, delete_user
 
 blueprint = Blueprint("user_actions", __name__)
 
