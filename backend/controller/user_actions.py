@@ -1,7 +1,7 @@
 from flask import Blueprint, request
 from backend.model.user_dao import select_all, select_user
 
-blueprint = Blueprint("auth", __name__)
+blueprint = Blueprint("user_actions", __name__)
 
 
 @blueprint.route("/get-all", methods=["POST"])

@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-from model import user_dao
+
+from controller.user_actions import blueprint as user_actions
 from controller.auth import blueprint as auth
 from controller.friendship import blueprint as friendship
 from flask_cors import CORS
@@ -10,6 +11,7 @@ CORS(app)
 
 app.register_blueprint(auth, url_prefix="/auth")
 app.register_blueprint(friendship, url_prefix="/friendship")
+app.register_blueprint(user_actions, url_prefix="/user_actions")
 
 
 @app.route('/')
