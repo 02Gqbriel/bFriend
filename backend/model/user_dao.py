@@ -31,7 +31,3 @@ def update_user(user: User, user_id: int):
 def delete_user(user_id: int):
     response = connect_database("DELETE FROM User WHERE userID = ?", user_id)
     return response
-
-
-def change_status(user_id: int, acc_status: int):
-    return "JOE mama"

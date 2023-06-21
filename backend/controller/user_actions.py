@@ -46,8 +46,3 @@ def update_user_from_database():
 
     update_user(user, 1)
     return "Deleted"
-
-
-@blueprint.route("/activation", methods=["POST"])
-def change_status_from_database():
-    return "Joe mama"
