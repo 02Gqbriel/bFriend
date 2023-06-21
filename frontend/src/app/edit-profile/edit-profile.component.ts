@@ -8,6 +8,8 @@ import axios, { AxiosResponse } from "axios";
 })
 export class EditProfileComponent implements OnInit {
 
+  userData: any[] = [];
+
   constructor() {
     this.get_user_session();
   }
@@ -17,6 +19,8 @@ export class EditProfileComponent implements OnInit {
   }
 
   get_user_session() {
+
+
     const formData = new FormData();
     formData.append("userID", '1');
 
@@ -25,7 +29,7 @@ export class EditProfileComponent implements OnInit {
       .then((response: AxiosResponse) => {
         console.log("user data has been received");
         console.log(response.data);
-        return response.data;
+        this.userData = response.data;
       })
       .catch((error: any) => {
         console.log(error);
@@ -42,15 +46,14 @@ export class EditProfileComponent implements OnInit {
 
     edit_profile_onClick(data: any ){
 
+    console.log(data)
+
     if (data.password == data.password_confirm) {
 
-      for (let i = 0; i < 5000; i++){
         const response_status = document.getElementById("success");
         const p = document.createElement("p");
         p.textContent = "All changes have been saved";
         response_status?.appendChild(p);
-      }
-
 
       const formData = new FormData();
 
@@ -81,5 +84,4 @@ export class EditProfileComponent implements OnInit {
     }
 
   }
-
 }
